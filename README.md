@@ -27,8 +27,10 @@ const NavLinks = dynamic(() => import('@/app/ui/dashboard/nav-links').then((m) =
 ORM 的核心思想：让你用操作对象的方式（user.save()）去操作数据库（INSERT INTO...），而不必直接编写繁琐的 SQL 语句。
 
 5.streaming:流媒体区块并行渲染，流媒体两种实现方式
-a.在页面层面，使用 loading.tsx 文件（它为你创建了 <Suspense>）
-b.在组件层面，则有 <Suspense> 进行更细致的控制
+a.在页面层面，使用 loading.tsx 文件（它为你创建了 <Suspense>）---整页
+b.在组件层面，则有 <Suspense> 进行更细致的控制 ----- 组件某一个部分区域
+
+streaming能帮助你创造更愉快的用户体验
 
 6.路由组:使用（）创建路由组
 当你用括号 （） 创建新文件夹时，名称不会包含在 URL 路径中。所以 /dashboard/(overview)/page.tsx 变成了 /dashboard。
