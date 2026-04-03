@@ -36,3 +36,5 @@ streaming能帮助你创造更愉快的用户体验
 
 6.路由组:使用（）创建路由组
 当你用括号 （） 创建新文件夹时，名称不会包含在 URL 路径中。所以 /dashboard/(overview)/page.tsx 变成了 /dashboard。
+
+7.使用[]创建动态路由
