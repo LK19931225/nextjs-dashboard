@@ -25,3 +25,10 @@ const NavLinks = dynamic(() => import('@/app/ui/dashboard/nav-links').then((m) =
 关系型数据库：以表为中心。数据是行和列，关系是外键（如 user_id 列）。
 
 ORM 的核心思想：让你用操作对象的方式（user.save()）去操作数据库（INSERT INTO...），而不必直接编写繁琐的 SQL 语句。
+
+5.streaming:流媒体区块并行渲染，流媒体两种实现方式
+a.在页面层面，使用 loading.tsx 文件（它为你创建了 <Suspense>）
+b.在组件层面，则有 <Suspense> 进行更细致的控制
+
+6.路由组:使用（）创建路由组
+当你用括号 （） 创建新文件夹时，名称不会包含在 URL 路径中。所以 /dashboard/(overview)/page.tsx 变成了 /dashboard。
