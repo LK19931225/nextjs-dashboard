@@ -18,6 +18,8 @@ const NavLinks = dynamic(() => import('@/app/ui/dashboard/nav-links').then((m) =
 });
 ```
 
+客户端组件，意味着你可以使用事件监听器和钩子,这在服务端渲染的组件中，不能使用。
+
 4.ORM:对象关系映射
 用于在面向对象的编程语言（如 Java, Python, C#）和关系型数据库（如 MySQL, PostgreSQL）之间搭建一座“桥梁”，这个桥梁要解决一个根本性的“阻抗不匹配”问题：
 
