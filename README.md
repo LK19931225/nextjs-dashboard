@@ -38,3 +38,5 @@ streaming能帮助你创造更愉快的用户体验
 当你用括号 （） 创建新文件夹时，名称不会包含在 URL 路径中。所以 /dashboard/(overview)/page.tsx 变成了 /dashboard。
 
 7.使用[]创建动态路由
+
+8.使用error.tsx处理错误边界，使用not-found.tsx处理404,notFound 会优先于 error.tsx
