@@ -1,6 +1,12 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
+import { Metadata } from 'next';
 import { Suspense } from 'react';
+
+// 为某个特定页面添加自定义标题，会覆盖父页面的元数据
+export const metadata: Metadata = {
+  title: 'Login',
+};
  
 export default function LoginPage() {
   return (

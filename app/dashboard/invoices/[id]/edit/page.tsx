@@ -3,6 +3,14 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 
+import { Metadata } from 'next';
+ 
+// 为某个特定页面添加自定义标题，会覆盖父页面的元数据
+export const metadata: Metadata = {
+  title: 'Edit Invoice',
+};
+
+
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   // 获取动态路由参数
   const params = await props.params;

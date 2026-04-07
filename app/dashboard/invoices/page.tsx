@@ -6,7 +6,13 @@ import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
- 
+import { Metadata } from 'next';
+
+// 为某个特定页面添加自定义标题，会覆盖父页面的元数据
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
+
 export default async function Page(props: {
   searchParams?: Promise<{
     query?: string;
