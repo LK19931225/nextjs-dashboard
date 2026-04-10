@@ -72,3 +72,14 @@ html中常见的元数据
 // Favicon 元数据 ：该元数据将 favicon（一个小图标）链接到浏览器地址栏或标签页中显示的网页。
 <link rel="icon" href="path/to/favicon.ico" />
 ```
+
+#### 10.关于use client的解释
+一、'use client' 组件默认走服务端渲染（SSR），然后才 hydration
+在 Next.js App Router 中：
+所有组件（无论是否标记 'use client'）默认都会在服务端执行一次，生成初始 HTML。
+标记 'use client' 只是告诉 Next.js：这个组件需要在客户端可交互（支持 useState、useEffect、onClick 等），并且它的 JS 代码会被打包发送给浏览器。服务端渲染阶段：组件函数在 Node.js 环境中运行，生成静态 HTML 字符串。浏览器接收到 HTML 后，会下载对应的 JS 脚本，执行 hydration（水合），将事件监听和状态绑定到 DOM 上。所以结论：'use client' 组件 = 服务端渲染（SSR）+ 客户端水合（hydrate）。不是纯客户端渲染（CSR）。
+
+ use client 只是允许你在组件里写交互代码，并不改变服务端渲染的发生。
+
+#### 11.getServerSideProps在appRouter中的改动
+在 App Router 中，服务端组件可以直接 async 获取数据，等价于旧版的 getServerSideProps。
